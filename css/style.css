@@ -1,0 +1,532 @@
+/* ---начало---Регистрируем новый шрифт--- */
+@font-face {
+  font-family: "SFProDisplay-Regular";
+  src: local("SFProDisplay-Regular"),
+    url("../fonts/SFProDisplay-Regular.woff") format("woff"),
+    url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SFProDisplay-Semibold";
+  src: local("SFProDisplay-Semibold"),
+    url("../fonts/SFProDisplay-Semibold.woff") format("woff"),
+    url("../fonts/SFProDisplay-Semibold.woff2") format("woff2");
+  font-weight: bold;
+}
+/* --конец---Регистрируем новый шрифт--- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SFProDisplay-Regular", sans-serif; /* Задали шрифты для всей страницы */
+  background: #e5e5e5;
+}
+/* Шапка */
+.header {
+  background: #fa8c16; /* Фон шапки */
+  padding-top: 16px; /* Отступ сверху шапки */
+  padding-bottom: 16px; /* Отступ снизу шапки */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); /* Тень шапки */
+  margin-bottom: 30px; /* шапка двигает контент вниз на 30пикселей */
+}
+
+/* Класс, содержащий меню, логотип и поисковую строку */
+.header-wrapper {
+  /*border: 1px solid #000; /* Границы блока: толщина и цвет */
+  max-width: 1200px; /* Максимальная ширина блока */
+  width: 90%; /* Ширина блока */
+  margin: auto; /* Выравнивает по середине */
+  display: flex; /* Элементы блока располагаются не вертикально, а горизонтально */
+  justify-content: space-between; /*Определяет, как браузер распределяет пространство вокруг флекс-элементов вдоль главной оси контейнера. Флексы равномерно распределяются по всей строке. Первый и последний элемент прижимаются к соответствующим краям контейнера.*/
+  align-items: center; /* Выравнивает элементы по центру */
+}
+/* Задает расстояние между меню и заголовком (60) и между меню и поисковой строкой */
+.header-nav {
+  margin-left: 60px;
+  margin-right: auto;
+}
+/* меню */
+.header-menu {
+  display: flex; /* Элементы блока располагаются не вертикально, а горизонтально */
+  list-style: none; /* Отключаем точки списка */
+  padding: 0; /* Убираем отступ перед первым словом */
+  margin: 0; /* Отключаем отступы сверху и снизу */
+}
+
+/* Класс, отвечающий за ссылки в меню */
+.header-menu-link {
+  text-decoration: none; /* Отключаем подчеркивание */
+  color: #fafafa; /* Задаем цвет текста */
+  margin-right: 15px; /* Отступ между пунктами меню */
+  font-size: 14px; /* Размер шрифта */
+  line-height: 22px; /* Расстояние между строками, если вдру появится вторая строка */
+}
+
+/* Оформляем поисковую строку - блок */
+.input-group {
+  height: 32px; /* Высота блока */
+  max-width: 237px; /* Ширина блока */
+  width: 60%;
+  position: relative; /* Относительное позиционирование.Положение элемента устанавливается относительно его исходного места. */
+  background: #fff; /* Фон блока */
+  border-radius: 4px; /* Скругления */
+  overflow: hidden; /* Чтобы за предел блока ничего не выходило */
+  border: 1px solid #d9d9d9; /* Рамка */
+}
+
+/* Оформляем строку ввода */
+.search-input {
+  height: 100%; /* Чтобы высота блока была 32пикселя */
+  width: 80%; /* Чтобы ширина блока была 80 процентов от 237 пикселей */
+  border: none; /* Отключаем границы */
+  font-size: 14px; /* Размер шрифта */
+  line-height: 22px; /* Расстояние между строками, если вдру появится вторая строка */
+  padding-left: 12px; /* Отступ слева */
+}
+
+/* Оформляем кнопку поиска */
+.search-button {
+  height: 100%; /* Чтобы высота блока была 32пикселя */
+  width: 20%; /* Чтобы ширина блока была 20 процентов от 237 пикселей */
+  position: absolute; /*Абсолютное позиционирование. Положение элемента задаётся свойствами left, top, right и bottom.*/
+  right: 0; /*Чтобы примкнула к правому ..*/
+  top: 0; /*.. верхнему краю*/
+  border: none; /* Отключаем границы */
+  background: #fff; /* Фон блока */
+  cursor: pointer; /* Чтобы при наведении на кнопку курсор менялся на руку */
+  /* Сделаем иконку посредине */
+  display: flex; /* Элементы блока располагаются не вертикально, а горизонтально */
+  justify-content: center; /*Определяет, как браузер распределяет пространство вокруг флекс-элементов вдоль главной оси контейнера. Флексы выравниваются по центру строки.*/
+  align-items: center; /* Выравнивает элементы по центру */
+}
+
+/* Зададим цвет текста, т.е. цвет placeholder
+Надо чтобы во всех браузерах стили отображались одинакова */
+.search-input::-moz-placeholder {
+  color: #bfbfbf; /* Цвет подсказывающего текста */
+}
+.search-input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+.search-input:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+.search-input::-ms-input-placeholder {
+  color: #bfbfbf;
+}
+.search-input::placeholder {
+  color: #bfbfbf;
+}
+
+/* --начало--скрываем меню для маленького экрана */
+.menu-toggle {
+  display: none;
+}
+/* --конец--скрываем меню для маленького экрана */
+
+/* конец шапки */
+/* начало контента */
+.content {
+  max-width: 1200px; /* Максимальная ширина блока */
+  width: 90%; /* Ширина блока */
+  margin: auto; /* Выравнивает по середине */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+/* лента с постами */
+.posts {
+  width: 67%; /* ширина блока*/
+}
+.post-body {
+  /* отступы текста по бокам, сверху и снизу */
+  padding-top: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 0;
+}
+/* оформляем каждый пост */
+.post {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 30px;
+}
+/* заголовок поста */
+.post-title {
+  font-family: "SFProDisplay-Semibold", sans-serif;
+  margin-top: 0;
+  margin-bottom: 19px;
+  font-weight: 600; /* жирность шрифта */
+  font-size: 16px; /* размер */
+  line-height: 24px; /* высота */
+}
+/* текст поста */
+.post-text {
+  color: #262626;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+}
+.tags {
+  margin-bottom: 22px;
+}
+.tag {
+  color: #bfbfbf;
+  font-size: 14px;
+  line-height: 22px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.post-footer {
+  border-top: 1px solid #e8e8e8;
+  background: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.post-buttons {
+  display: flex;
+  align-items: center;
+}
+.post-button .icon {
+  fill: #8c8c8c;
+}
+
+.icon-like,
+.icon-comment {
+  margin-right: 6px;
+}
+
+.post-button {
+  background-color: transparent; /* прозрачный цвет фона */
+  border: none;
+  color: #8c8c8c8c;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 22px;
+  margin-right: 19px;
+  cursor: pointer;
+}
+.post-author {
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+.author-avatar {
+  width: 34px;
+  height: 34px;
+  margin-left: 9px;
+  border-radius: 4px;
+}
+.author-username {
+  display: block;
+  color: #8c8c8c;
+  font-size: 12px;
+  line-height: 20px;
+  text-decoration: none;
+}
+.post-time {
+  color: #bfbfbf;
+  font-size: 12px;
+  line-height: 20px;
+}
+.sidebar {
+  width: 31%;
+}
+
+.user {
+  background-color: #fafafa;
+  border: 1px solid #e8e8e8;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.user-avatar {
+  border-radius: 50%;
+  margin-right: 17px;
+}
+.user-name {
+  font-family: "SFProDisplay-Semibold", sans-serif;
+  color: #595959;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+.icon-exit {
+  width: 20px;
+  height: 20px;
+  fill: #000;
+}
+
+.sidebar-nav {
+  background-color: #fff;
+}
+.sidebar-menu {
+  margin: 0;
+  border: 1px solid #e8e8e8;
+  border-top: none;
+  list-style-type: none; /* убираем точки */
+  padding: 0;
+}
+.sidebar-menu-link {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 22px;
+  color: #595959;
+  padding: 16px 48px;
+  display: inline-block;
+  width: 100%;
+}
+/* при наведении на меню справа */
+.sidebar-menu-link:hover {
+  background-color: #fffbe6;
+}
+
+.sidebar-menu-link:active {
+  background-color: #fffbe6;
+  border-right: 3px solid #faad14;
+}
+
+.button {
+  background: #faad14;
+  border-radius: 4px;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 13px;
+  cursor: pointer;
+}
+
+.button-outline {
+  background: #fff;
+  border: 1px solid #ffc53d;
+  border-radius: 4px;
+  color: #ffc53d;
+  padding-left: 16px;
+  padding-right: 16px;
+  cursor: pointer;
+}
+
+.button-outline .icon {
+  width: 14px;
+  height: 11px;
+  fill: #ffc53d;
+}
+
+.button-new-post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.icon-fire {
+  fill: #fff;
+  width: 11px;
+  height: 13px;
+  margin-right: 10px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  margin-top: 20px;
+}
+.card-header {
+  background: #fafafa;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 23px 25px;
+}
+.card-title {
+  margin: 0;
+  font-family: "SFProDisplay-Semibold", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+}
+.card-body {
+  padding: 22px 40px 20px 25px;
+}
+.card-body-title {
+  text-decoration: none;
+  margin: 0 0 10px;
+  font-family: "SFProDisplay-Semibold", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #d48806;
+}
+.card-text {
+  font-size: 14px;
+  line-height: 22px;
+  color: #262626;
+  margin: 10px 0;
+}
+/* блок с рекламой */
+.promo {
+  display: block;
+  background: #fff;
+  background-image: url("../img/promo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 260px;
+  border: 1px solid #e8e8e8;
+  margin-top: 20px;
+  position: relative;
+}
+.promo::before {
+  content: "Реклама";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #c4c4c4;
+  padding-left: 26px;
+  padding-right: 26px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+/* ---начало---страница новый пост */
+.add-post {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-title {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  padding: 23px 30px;
+  margin-bottom: 16px;
+}
+.add-text {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  padding: 23px 30px;
+  margin-bottom: 16px;
+  min-height: 362px;
+}
+.add-button {
+  width: 100%;
+  max-width: 370px;
+  margin-right: 2%;
+}
+.add-post .button-outline {
+  margin-right: 1%;
+}
+/* ---конец---страница новый пост */
+
+/* ---начало---адаптация под маленький экран */
+@media (max-width: 990px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    margin-left: 12px;
+  }
+  .menu-toggle span {
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+  }
+  /* --начало--фиксируем шапку */
+  .header {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  /* --конец--фиксируем шапку */
+  /* сделаем, чтобы контент отодвигался сверху и его не скрывала шапка */
+  .content {
+    margin-top: 94px;
+    margin-bottom: 60px;
+  }
+  .sidebar {
+    position: fixed;
+    z-index: 101;
+    top: 64px;
+    right: 0;
+    bottom: 0;
+    height: calc(100% - 64px);
+    max-width: 320px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15); /* тень меню */
+    padding: 30px;
+    /* чтобы меню выезжало справа */
+    transform: translateX(100%);
+    transition: transform 0.2s;
+    /* чтобы прокручивался */
+    overflow-y: auto;
+  }
+  .sidebar.visible {
+    transform: translateX(0);
+  }
+  .posts {
+    width: 100%;
+  }
+  /* опускаем меню вниз, чтобы оно не было близко к поиску */
+  .header-nav {
+    display: none;
+  }
+  .header-menu {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 676px) {
+  .add-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .add-button {
+    width: 100%;
+    max-width: 100%;
+  }
+  .add-post .button-outline {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .post-footer {
+    flex-direction: column;
+  }
+  .post-author {
+    margin-top: 15px;
+  }
+  .post-avatar {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .author-about {
+    order: 2;
+    text-align: left;
+  }
+  .add-button {
+    width: 100%;
+  }
+}

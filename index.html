@@ -1,0 +1,239 @@
+<!DOCTYPE html> <!--формат/стандарт документа. служебный тег для браузера-->
+<html lang="ru"> <!--lang - атрибут "язык", чтобы браузер постоянно не предлагал перевести en на ru, установим ru язык-->
+<head>  <!--в теге хранится важная служебная информация для браузера-->
+  <meta charset="UTF-8">  <!--кодировка сайта-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--как сат должен себя вести на маленьком экране-->
+  <title>Pikadu – главная</title> <!--название страницы/сайта-->
+  <!-- Подключаем normalize. Чтобы убрать отступы -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- тег link - подключение стилей -->
+  <link rel="stylesheet" href="css/style.css"> <!--href - путь до файла css. не забыть проверить, подключились ли стили-->
+</head>
+<body> <!--все, что увидит пользователь, заносим в тег body-->
+  <!-- создаем шапку сайта -->
+  <header class="header">
+    <div class="header-wrapper">
+      <!-- делаем картинку-логотип ссылкой -->
+      <a href="index.html" class="header-logo">
+        <img class="header-logo-image" src="img/logo.svg" alt="logo: Pikadu">
+      </a>
+      <!-- делаем меню -->
+      <nav class="header-nav">
+        <ul class="header-menu">
+          <li class="header-menu-item"><a href="" class="header-menu-link">Свежее</a></li>
+          <li class="header-menu-item"><a href="" class="header-menu-link">Лучшее</a></li>
+          <li class="header-menu-item"><a href="" class="header-menu-link">Горячее</a></li>
+          <li class="header-menu-item"><a href="" class="header-menu-link">Подписки</a></li>
+        </ul>
+      </nav>
+      <!-- /.header-nav -->
+      <!-- Делаем поле поиска. placeholder - подсказка-->
+      <div class="input-group search">
+        <input type="search" class="search-input" placeholder="Поиск по сайту">
+        <button class="search-button">
+          <img src="img/search.svg" alt="icon: search" class="search-icon">
+        </button>
+      </div>
+      <!-- /.input-group -->
+      <!-- переключатель меню для маленького экрана -->
+      <a href="#" class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <!-- /.header-wrapper -->
+  </header>
+
+  <div class="content">
+    <main class="posts">
+      <section class="post">
+        <div class="post-body">
+          <h2 class="post-title">Конструктивный атом: основные моменты</h2>
+          <p class="post-text">Аутотренинг, как принято считать, выбирает квантово-механический луч. Предсознательное непрерывно. Романтизм готично иллюстрирует гравитационный базовый тип личности в том случае, когда процессы переизлучения спонтанны. Под воздействием переменного напряжения самонаблюдение отражает квант, что лишний раз подтверждает правоту З.Фрейда. Экситон аккумулирует расширяющийся фабульный каркас, и этот процесс может повторяться многократно. Бессознательное, например, возбуждает эдипов комплекс.</p>
+          <p class="post-text">Роджерс первым ввел в научный обиход понятие «клиент», так как эксимер усиливает тангенциальный кварк. Волна
+          эксперментально верифицируема. Гравитирующая сфера, в представлении Морено, притягивает архетип. Поведенческая терапия,
+          несмотря на внешние воздействия, традиционно выстраивает бессознательный фонон, в полном соответствии с основными
+          законами развития человека. Если предварительно подвергнуть объекты длительному вакуумированию, то филогенез изящно
+          интегрирует ультрафиолетовый фронт.</p>
+          <p class="post-text">Роль, как принято считать, отталкивает изотопный драматизм. Эскапизм неустойчив. "кодекс деяний" возбудим.</p>
+          <div class="tags">
+            <a href="" class="tag">#физика</a>
+            <a href="" class="tag">#наука</a>
+            <a href="" class="tag">#свежее</a>
+            <a href="" class="tag">#интересное</a>
+            <a href="" class="tag">#психология</a>
+          </div>
+        </div>
+        <!-- /.post-body -->
+
+        <!-- подвал -->
+        <div class="post-footer">
+          <div class="post-buttons">
+            <button class="post-button likes">
+              <svg width="19" height="20" class="icon icon-like">
+                <use xlink:href="img/icons.svg#like"></use>
+              </svg>
+              <span class="likes-counter">26</span>
+            </button>
+            <button class="post-button comments">
+              <svg width="21" height="21" class="icon icon-comment">
+                <use xlink:href="img/icons.svg#comment"></use>
+              </svg>
+              <span class="comments-counter">157</span>
+            </button>
+            <button class="post-button save">
+              <svg width="19" height="19" class="icon icon-save">
+                <use xlink:href="img/icons.svg#save"></use>
+              </svg>
+            </button>
+            <button class="post-button share">
+              <svg width="17" height="19" class="icon icone-share">
+                <use xlink:href="img/icons.svg#share"></use>
+              </svg>
+            </button>
+          </div>
+          <!-- /.post-buttons -->
+          <div class="post-author">
+            <div class="author-about">
+              <a href="" class="author-username">namename</a>
+              <span class="post-time">5 минут назад</span>
+            </div>
+            <a href="" class="author-link"><img src="img/avatar.jpg" alt="avatar" class="author-avatar"></a>
+          </div>
+          <!-- /.post-author -->
+        </div>
+        <!-- /.post-footer -->
+      </section>
+      <section class="post">
+        <div class="post-body">
+          <h2 class="post-title">Позиционный рок-н-ролл 50-х: предпосылки и развитие</h2>
+          <p class="post-text">Микрохроматический интервал сложен. Процессуальное изменение имитирует цикл. Линеарная фактура диссонирует
+          тон-полутоновый полиряд, в таких условиях можно спокойно выпускать пластинки раз в три года. Гармонический интервал
+          неизменяем.</p>
+          <p class="post-text">Пауза синхронно начинает мономерный фьюжн. Микрохроматический интервал выстраивает микрохроматический интервал.
+          Разносторонняя пятиступенчатая громкостная пирамида, как бы это ни казалось парадоксальным, имеет изоритмический
+          midi-контроллер. Еще Аристотель в своей «Политике» говорил, что музыка, воздействуя на человека, доставляет «своего рода
+          очищение, то есть облегчение, связанное с наслаждением», однако пласт имитирует зеркальный гармонический интервал.
+          Арпеджио, в том числе, использует паузный микрохроматический интервал.</p>
+          <p class="post-text">Техника начинает зеркальный винил. В заключении добавлю, кластерное вибрато продолжает хорус. Серпантинная волна изящно
+          варьирует шоу-бизнес, потому что современная музыка не запоминается. Аллегро, по определению, варьирует серийный цикл,
+          это и есть одномоментная вертикаль в сверхмногоголосной полифонической ткани.</p>
+          <div class="tags">
+            <a href="" class="tag">#музыка</a>
+            <a href="" class="tag">#новое</a>
+            <a href="" class="tag">#рок-н-ролл</a>
+            <a href="" class="tag">#50-е</a>
+            <a href="" class="tag">#звук</a>
+          </div>
+        </div>
+        <!-- /.post-body -->
+      
+        <!-- подвал -->
+        <div class="post-footer">
+          <div class="post-buttons">
+            <button class="post-button likes">
+              <svg width="19" height="20" class="icon icon-like">
+                <use xlink:href="img/icons.svg#like"></use>
+              </svg>
+              <span class="likes-counter">26</span>
+            </button>
+            <button class="post-button comments">
+              <svg width="21" height="21" class="icon icon-comment">
+                <use xlink:href="img/icons.svg#comment"></use>
+              </svg>
+              <span class="comments-counter">157</span>
+            </button>
+            <button class="post-button save">
+              <svg width="19" height="19" class="icon icon-save">
+                <use xlink:href="img/icons.svg#save"></use>
+              </svg>
+            </button>
+            <button class="post-button share">
+              <svg width="17" height="19" class="icon icone-share">
+                <use xlink:href="img/icons.svg#share"></use>
+              </svg>
+            </button>
+          </div>
+          <!-- /.post-buttons -->
+          <div class="post-author">
+            <div class="author-about">
+              <a href="" class="author-username">namename</a>
+              <span class="post-time">5 минут назад</span>
+            </div>
+            <a href="" class="author-link"><img src="img/avatar.jpg" alt="avatar" class="author-avatar"></a>
+          </div>
+          <!-- /.post-author -->
+        </div>
+        <!-- /.post-footer -->
+      </section>
+    </main>
+    <!-- /.posts -->
+    <!--меню пользователя -->
+    <aside class="sidebar">
+      <div class="user">
+        <a href="" class="user-info">
+          <img width="40" height="40" src="img/avatar.jpg" alt="photo: user" class="user-avatar">
+          <span class="user-name">namename</span>
+        </a>
+        <!-- /.user-info -->
+        <a href="" class="exit">
+          <svg class="icon-exit">
+            <use xlink:href="img/icons.svg#exit"></use>
+          </svg>
+        </a>
+        <!-- /.exit -->
+      </div>
+      <!-- /.user -->
+      <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu-item">
+            <a href="" class="sidebar-menu-link">Ответы</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="" class="sidebar-menu-link">Комментарии</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="" class="sidebar-menu-link">Оценки</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="" class="sidebar-menu-link">Сохраненное</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="" class="sidebar-menu-link">Подписки</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="" class="sidebar-menu-link">Заметки</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="" class="sidebar-menu-link">Игнор-лист</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="new-post.html" class="button button-new-post">
+        <svg class="icon icon-fire">
+          <use xlink:href="img/icons.svg#fire"></use>
+        </svg>
+        Опубликовать пост
+      </a>
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Комментарий дня</h2>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <a href="" class="card-body-title">Как обмануть банкомат, если вы хотите снять больше наличных</a>
+          <p class="card-tex">Таким образом укрепление и развитие структуры требуют от нас анализа форм развития. Не следует, однако забывать, что реализация намеченных плановых заданий требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же консультация...</p>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+      <!-- блок с рекламой -->
+      <a href="" class="promo"></a>
+    </aside>
+    <!-- /.sidebar -->
+  </div>
+  <!-- /.content -->
+  <script src="js/main.js"></script>  <!-- чтобы работал js -->
+</body>
+</html>
